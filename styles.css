@@ -1,0 +1,504 @@
+/* general */
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #fff;
+}
+.sectionspaces {
+  margin: 40px 0;
+}
+/* index.html page */
+/* header style is the same in every page */
+#mainHeader {
+  background-color: rgb(47, 91, 106);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(47, 91, 106);
+  box-shadow: rgb(47, 91, 106) 0px 4px 12px;
+}
+#mainHeader img {
+  width: 140px;
+  height: 50px;
+}
+#mainHeader nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+#mainHeader nav ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 0 10px;
+  font-size: 17px;
+}
+#mainHeader nav ul li a:hover {
+  color: white;
+}
+#mainHeader nav ul li a.selected {
+  color: white;
+}
+#mobile {
+  display: none;
+}
+#close {
+  display: none;
+}
+
+#mainBanner {
+  background-image: url(https://images.pexels.com/photos/2662792/pexels-photo-2662792.jpeg?auto=compress&cs=tinysrgb&w=600);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 10rem;
+  padding-left: 10rem;
+  padding-bottom: 10rem;
+  color: black;
+  font-size: 20px;
+  line-height: 1.4;
+}
+#mainBanner div {
+  width: 400px;
+}
+#mainBanner h1 span {
+  color: rgb(47, 91, 106);
+}
+#mainServices {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#mainServices h1 {
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 2.5rem;
+}
+#mainServices div#mainServicesCantainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+#mainServices a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.1rem;
+}
+
+#mainServices a div {
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.1s ease;
+}
+#mainServices a div:hover {
+  border-radius: 8px;
+  box-shadow: rgb(47, 91, 106) 0px 4px 12px;
+}
+#mainServices div img {
+  padding-bottom: 20px;
+  width: 350px;
+  height: 300px;
+  object-fit: cover;
+}
+#mainServices div img:hover {
+  border-radius: 8px;
+}
+footer {
+  border-top: 1px solid rgb(47, 91, 106);
+  box-shadow: rgb(47, 91, 106) 0px 4px 12px;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+footer div {
+  display: flex;
+  font-size: 18px;
+}
+footer div a {
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+/* about page */
+#aboutPage {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+#aboutCompany {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 5rem 0;
+  position: relative;
+  background-image: url(pattern.svg);
+}
+#aboutCompany::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(191, 203, 206, 0.617); /* High opacity */
+  z-index: 1; /* Layer it above the background image */
+}
+#aboutCompany div {
+  z-index: 2;
+  max-width: 42rem;
+  min-width: 200px;
+}
+#aboutCompany div p {
+  line-height: 1.4;
+  font-size: 17px;
+}
+/* contact page */
+#contactPage {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+#contactUsMainSection {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+  position: relative;
+  background-image: url(pattern.svg);
+}
+#contactUsMainSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(191, 203, 206, 0.617); /* High opacity */
+  z-index: 1; /* Layer it above the background image */
+}
+#contactUsMainSection #contactForm {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: rgb(47, 91, 106) 0px 4px 12px;
+  width: 700px;
+  margin: auto;
+  z-index: 2;
+}
+
+#contactForm h2 {
+  margin-bottom: 20px;
+}
+
+#contactForm label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+#contactForm input:focus,
+#contactForm textarea:focus {
+  outline: 1px solid rgb(47, 91, 106);
+}
+#contactForm textarea {
+  resize: none;
+}
+#contactForm button {
+  background-color: rgb(47, 91, 106);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#contactForm button:hover {
+  background-color: rgb(35, 68, 79);
+}
+
+/* error message of contact page*/
+
+#confirmMessage {
+  display: none;
+  line-height: 1.4;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  margin-top: 20px;
+  background-color: #fff;
+  border: 1px solid rgb(47, 91, 106);
+  box-shadow: rgb(47, 91, 106) 0px 4px 12px;
+  color: #333;
+  padding: 15px;
+  border-radius: 5px;
+}
+#confirmMessage.show {
+  display: flex;
+}
+
+#confirmMessage .confirmContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align the content */
+}
+
+#confirmMessage p {
+  font-size: 14px;
+  margin: 0 0 10px; /* Margin below the paragraph */
+  text-align: center; /* Center text */
+}
+
+#confirmButton {
+  background-color: rgb(47, 91, 106); /* Dark red button */
+  color: white; /* White text */
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#confirmButton:hover {
+  background-color: rgb(35, 68, 79); /* Darker red on hover */
+}
+#overlay {
+  display: none; /* Hide by default */
+  position: fixed; /* Position it absolutely */
+  top: 0;
+  left: 0;
+  width: 100%; /* Cover the entire section */
+  height: 100%; /* Cover the entire section */
+  background-color: rgba(0, 0, 0, 0.693);
+  z-index: 9;
+}
+#confirmMessage.show ~ #overlay {
+  display: block;
+}
+/* product pages */
+#productPage {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+#productMainSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+#productMainSection h1,
+#productMainSection p {
+  text-align: center;
+  line-height: 1.4;
+}
+#productMainSection p {
+  padding-bottom: 20px;
+}
+#productMainSection div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+#productMainSection div img {
+  border-radius: 8px;
+  width: 350px;
+  height: 300px;
+  object-fit: cover;
+  box-shadow: rgb(47, 91, 106) 0px 4px 12px;
+}
+/* book cover page */
+#bookCover img {
+  object-fit: contain !important;
+}
+
+/* start of media  */
+/* Large Devices (Laptops, 1025px to 1440px) */
+@media (max-width: 1440px) {
+  #mainServices div img {
+    width: 330px;
+    height: 300px;
+  }
+  #productMainSection div img {
+    width: 330px;
+    height: 300px;
+  }
+}
+
+/* Medium Devices (Tablets, 769px to 1024px) */
+@media (max-width: 1025px) {
+  #mainServices div#mainServicesCantainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* about page */
+  #aboutCompany div h2 {
+    font-size: 50px;
+  }
+  #aboutCompany div p {
+    font-size: 35px;
+  }
+  /* contact page */
+  #contactUsMainSection #contactForm {
+    width: 700px;
+    margin-top: 4rem;
+  }
+  /* confirmation message of contact page */
+  #confirmMessage p {
+    font-size: 20px;
+  }
+  #confirmButton {
+    padding: 20px 40px;
+    font-size: 20px;
+  }
+  /* product page */
+  #productMainSection div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* Small Devices (Tablets, 481px to 768px) */
+@media (max-width: 899px) {
+  #mainHeader nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -350px;
+    height: 100vh;
+    width: 300px;
+    background-color: rgb(47, 91, 106);
+    box-shadow: 0 40px 60px rgb(47, 91, 106);
+    padding: 80px 0 0 10px;
+    z-index: 888;
+    transition: 0.3s;
+  }
+  #mainHeader nav.active {
+    right: 0;
+  }
+  #mainHeader nav ul {
+    flex-direction: column;
+  }
+  #mainHeader nav ul li {
+    padding-bottom: 10px;
+  }
+
+  #mainHeader nav ul li a {
+    font-size: 20px;
+  }
+  #mobile {
+    display: flex;
+    align-items: center;
+  }
+  #mobile i {
+    color: #1a1a1a;
+    font-size: 24px;
+    padding-left: 20px;
+  }
+  #close {
+    display: initial;
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    color: #222;
+    font-size: 24px;
+  }
+  #mainServices a {
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgb(47, 91, 106);
+  }
+  #mainServices div img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  /* about page */
+  #aboutCompany div h2,
+  #aboutCompany div p {
+    text-align: center;
+  }
+  #aboutCompany div h2 {
+    font-size: 30px;
+  }
+  #aboutCompany div p {
+    text-align: center;
+    font-size: 22px;
+  }
+  /* contact page */
+  #contactUsMainSection #contactForm {
+    width: 530px;
+    margin-top: 4rem;
+  }
+  /* confirmation message of contact page */
+  #confirmMessage p {
+    font-size: 25px;
+  }
+}
+/* small size */
+@media (max-width: 545px) {
+  #mainHeader img {
+    width: 100px;
+    height: 30px;
+  }
+  #mainHeader nav {
+    width: 200px;
+  }
+  #mainBanner {
+    padding-top: 3rem;
+    padding-left: 1.7rem;
+    padding-bottom: 3rem;
+    font-size: 15px;
+  }
+  #mainServices h1 {
+    font-size: 1.5rem;
+  }
+  #mainBanner div {
+    max-width: 300px;
+  }
+  #mainServices div#mainServicesCantainer {
+    gap: 30px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  footer {
+    justify-content: center;
+  }
+  /* contact page */
+  #contactUsMainSection #contactForm {
+    width: 370px;
+    margin-top: 10px;
+  }
+  /* confirmation message of contact page */
+  #confirmMessage {
+    top: 35%;
+    left: 50%;
+  }
+  #confirmMessage p {
+    font-size: 18px;
+  }
+  /* product page */
+  #productMainSection div {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
