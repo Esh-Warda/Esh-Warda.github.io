@@ -163,18 +163,9 @@ footer div a {
   gap: 40px;
   padding: 5rem 0;
   position: relative;
-  background-image: url(pattern.svg);
+  background-color: rgba(191, 203, 206, 0.617);
 }
-#aboutCompany::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(191, 203, 206, 0.617); /* High opacity */
-  z-index: 1; /* Layer it above the background image */
-}
+
 #aboutCompany div {
   z-index: 2;
   max-width: 42rem;

@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const bar = document.getElementById("bar");
     const close = document.getElementById("close");
     const nav = document.getElementsByTagName("nav")[0];
+    const links = nav.getElementsByTagName("a");
     
     if (bar) {
         bar.addEventListener("click", () => {
@@ -18,4 +19,9 @@ document.addEventListener('DOMContentLoaded', function () {
             nav.classList.remove('active');
         }
     });
+    for (let link of links) {
+        link.addEventListener('click', () => {
+            nav.classList.remove('active');
+        });
+    }
 });
