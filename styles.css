@@ -25,7 +25,7 @@ body {
 }
 #mainHeader img {
   width: 140px;
-  height: 50px;
+  height: 25px;
 }
 #mainHeader nav ul {
   display: flex;
@@ -53,7 +53,7 @@ body {
 }
 
 #mainBanner {
-  background-image: url(https://images.pexels.com/photos/2662792/pexels-photo-2662792.jpeg?auto=compress&cs=tinysrgb&w=600);
+  background-image: url(eshBigBanner.png);
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 10rem;
@@ -97,6 +97,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 1px solid rgb(212, 223, 227);
+  border-radius: 8px;
   transition: 0.1s ease;
 }
 #mainServices a div:hover {
@@ -107,10 +109,29 @@ body {
   padding-bottom: 20px;
   width: 350px;
   height: 300px;
-  object-fit: cover;
+  object-fit: contain;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgb(202, 202, 202);
 }
 #mainServices div img:hover {
-  border-radius: 8px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+#servicesOffered {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+#servicesOffered ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+#servicesOffered ul li {
+  list-style-type: none;
+  padding: 40px;
+  box-shadow: rgb(47, 91, 106) 0px 4px 12px;
+  font-size: 1.2rem;
+  width: 300px;
 }
 footer {
   border-top: 1px solid rgb(47, 91, 106);
@@ -159,9 +180,18 @@ footer div a {
   max-width: 42rem;
   min-width: 200px;
 }
+#aboutCompany div h2 {
+  padding-top: 20px;
+  padding-top: 15px;
+}
 #aboutCompany div p {
   line-height: 1.4;
-  font-size: 17px;
+  font-size: 20px;
+}
+#aboutCompany div ul li {
+  list-style-type: none;
+  line-height: 1.4;
+  font-size: 20px;
 }
 /* contact page */
 #contactPage {
@@ -319,14 +349,14 @@ footer div a {
 }
 #productMainSection div {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 #productMainSection div img {
   border-radius: 8px;
-  width: 350px;
-  height: 300px;
-  object-fit: cover;
+  width: 700px;
+  height: 600px;
+  object-fit: contain;
   box-shadow: rgb(47, 91, 106) 0px 4px 12px;
 }
 /* book cover page */
@@ -342,14 +372,17 @@ footer div a {
     height: 300px;
   }
   #productMainSection div img {
-    width: 330px;
-    height: 300px;
+    width: 400px;
+    height: 350px;
   }
 }
 
 /* Medium Devices (Tablets, 769px to 1024px) */
 @media (max-width: 1025px) {
   #mainServices div#mainServicesCantainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #servicesOffered ul {
     grid-template-columns: repeat(2, 1fr);
   }
   /* about page */
@@ -433,7 +466,14 @@ footer div a {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
   }
-
+  /* product page */
+  #productMainSection div {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #productMainSection div img {
+    width: 500px;
+    height: 450px;
+  }
   /* about page */
   #aboutCompany div h2,
   #aboutCompany div p {
@@ -445,6 +485,9 @@ footer div a {
   #aboutCompany div p {
     text-align: center;
     font-size: 22px;
+  }
+  #aboutCompany div ul li {
+    text-align: center;
   }
   /* contact page */
   #contactUsMainSection #contactForm {
@@ -481,8 +524,16 @@ footer div a {
     gap: 30px;
     grid-template-columns: repeat(1, 1fr);
   }
+  #servicesOffered ul {
+    grid-template-columns: repeat(1, 1fr);
+  }
   footer {
     justify-content: center;
+  }
+  /* product page */
+  #productMainSection div img {
+    width: 330px;
+    height: 300px;
   }
   /* contact page */
   #contactUsMainSection #contactForm {
@@ -496,9 +547,5 @@ footer div a {
   }
   #confirmMessage p {
     font-size: 18px;
-  }
-  /* product page */
-  #productMainSection div {
-    grid-template-columns: repeat(1, 1fr);
   }
 }

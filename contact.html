@@ -12,19 +12,13 @@
   </head>
   <body id="contactPage">
     <header id="mainHeader">
-      <img
-        src="https://img.freepik.com/premium-photo/blue-gray-logo-with-black-blue-design_1274269-63878.jpg"
-        alt="logo"
-      />
+      <img src="logo.png" alt="logo" />
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="infographic.html">Infographic</a></li>
           <li><a href="logo.html">Logo</a></li>
-          <li><a href="tShirt.html">T-shirt</a></li>
-          <li><a href="bookCover.html">Book-Cover</a></li>
           <li><a href="bussinessCard.html">Bussiness-Card</a></li>
-          <li><a href="postCard.html">Post-Card</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html" class="selected">Contact</a></li>
         </ul>
@@ -65,8 +59,8 @@
       <div id="confirmMessage">
         <div class="confirmContainer">
           <p>
-            Your message has sended successfully. We will answer you within 24
-            hours. Thanks
+            Your message has been sent successfully. We will respond to you
+            within 24 hours. Thank you.
           </p>
           <button id="confirmButton">Ok</button>
         </div>
@@ -121,6 +115,7 @@
         .addEventListener("click", function () {
           const confirmMessageDiv = document.getElementById("confirmMessage");
           confirmMessageDiv.classList.remove("show");
+          window.location.href = "index.html";
         });
     </script>
 
